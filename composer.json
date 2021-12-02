@@ -11,17 +11,24 @@
             "homepage": "https://www.juststeveking.uk/"
         }
     ],
+    "autoload": {
+        "psr-4": {
+            "JustSteveKing\\Workflow\\": "src/"
+        }
+    },
     "require": {
-        "php": "^8.0"
+        "php": "^8.0",
+        "symfony/yaml": "^6.0"
+    },
+    "require-dev": {
+        "pestphp/pest": "^1.21",
+        "phpstan/phpstan": "^1.2",
+        "spatie/ray": "^1.32"
     },
     "prefer-stable": true,
     "minimum-stability": "dev",
     "config": {
         "sort-packages": true,
         "optimize-autoloader": true
-    },
-    "require-dev": {
-        "pestphp/pest": "^1.21",
-        "phpstan/phpstan": "^1.2"
     }
 }
