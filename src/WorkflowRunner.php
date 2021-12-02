@@ -6,7 +6,7 @@ namespace JustSteveKing\Workflow;
 
 use JustSteveKing\Workflow\Contracts\WorkflowContract;
 
-class WorkflowRunner
+final class WorkflowRunner
 {
     protected function __construct(
         protected array $workflows,
@@ -16,9 +16,9 @@ class WorkflowRunner
      * @param array<int,WorkflowContract> $workflows
      * @return static
      */
-    public static function build(array $workflows = []): static
+    public static function build(array $workflows = []): WorkflowRunner
     {
-        return new static(
+        return new WorkflowRunner(
             workflows: $workflows
         );
     }
