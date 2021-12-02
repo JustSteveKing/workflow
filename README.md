@@ -1,5 +1,7 @@
 # Workflow
 
+[![Tests](https://github.com/JustSteveKing/workflow/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/JustSteveKing/workflow/actions/workflows/test.yml)
+
 This package is aimed to be a simplistic PHP workflow package that works in a similar fashion to GitHub Actions.
 
 ## Installation
