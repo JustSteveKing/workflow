@@ -1,0 +1,18 @@
+name: 'test'
+
+jobs:
+  test:
+    run:
+      target: ClassName
+      method: run
+      args:
+        - 'test'
+        - 10
+        - true
+
+  another:
+    run:
+      target: ClassName
+      method: another
+      args:
+        - 'test'
