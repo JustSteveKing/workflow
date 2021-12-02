@@ -11,3 +11,9 @@ it('can read a yaml file and return an array', function () {
         ),
     )->toBeArray()->name->toEqual('test');
 });
+
+it('throws an Invalid Arguement Exception if the file path does not exist', function () {
+    JsonLoader::load(
+        path: __DIR__ . '/../Fixtures/testing.json',
+    );
+})->throws(InvalidArgumentException::class);

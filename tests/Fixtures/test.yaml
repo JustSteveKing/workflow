@@ -3,7 +3,7 @@ name: 'test'
 jobs:
   test:
     run:
-      target: ClassName
+      target: JustSteveKing\Workflow\Stubs\Test
       method: run
       args:
         - 'test'
@@ -12,7 +12,7 @@ jobs:
 
   another:
     run:
-      target: ClassName
+      target: JustSteveKing\Workflow\Stubs\Test
       method: another
       args:
         - 'test'

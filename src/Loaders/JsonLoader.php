@@ -4,8 +4,9 @@ declare(strict_types=1);
 
 namespace JustSteveKing\Workflow\Loaders;
 
+use InvalidArgumentException;
 use JustSteveKing\Workflow\Contracts\LoaderContract;
-use Symfony\Component\Yaml\Yaml;
+use Throwable;
 
 class JsonLoader implements LoaderContract
 {
@@ -15,8 +16,20 @@ class JsonLoader implements LoaderContract
      */
     public static function load(string $path): array
     {
-        return (array) Yaml::parseFile(
-            filename: $path,
+        try {
+            $file = file_get_contents(
+                filename: $path,
+            );
+        } catch (Throwable $exception) {
+            throw new InvalidArgumentException(
+                message: "[$path] cannot be accessed or found",
+                previous: $exception,
+            );
+        }
+
+        return (array) json_decode(
+            json: strval($file),
+            associative: true,
         );
     }
 }

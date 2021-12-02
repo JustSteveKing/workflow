@@ -4,14 +4,16 @@ declare(strict_types=1);
 
 namespace JustSteveKing\Workflow\ValueObjects;
 
+use Tightenco\Collect\Support\Collection;
+
 class Workflow
 {
     /**
      * @param string $name
-     * @param array<int,Job> $jobs
+     * @param Collection $jobs
      */
     public function __construct(
         public string $name,
-        public array $jobs = [],
+        public Collection $jobs,
     ) {}
 }

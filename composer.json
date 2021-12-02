@@ -19,7 +19,8 @@
     "require": {
         "php": "^8.0",
         "ramsey/uuid": "^4.2",
-        "symfony/yaml": "^6.0"
+        "symfony/yaml": "^6.0",
+        "tightenco/collect": "^8.68"
     },
     "require-dev": {
         "pestphp/pest": "^1.21",
