@@ -19,5 +19,8 @@
     "config": {
         "sort-packages": true,
         "optimize-autoloader": true
+    },
+    "require-dev": {
+        "pestphp/pest": "^1.21"
     }
 }
