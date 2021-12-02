@@ -1,6 +1,6 @@
 {
     "name": "juststeveking/workflow",
-    "description": "A simple php workflow package",
+    "description": "This package is aimed to be a simplistic PHP workflow package that works in a similar fashion to GitHub Actions.",
     "type": "library",
     "license": "MIT",
     "authors": [
